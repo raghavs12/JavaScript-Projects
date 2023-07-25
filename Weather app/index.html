@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tektur&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="input.css" />
+    <div class="nav sticky bg-blue-200 h-20 w-full flex justify-center items-center"
+    >
+      <img
+        src="https://img.freepik.com/premium-psd/sunny-rainy-cloudy-day-weather-forecast-icon-illustration_47987-10695.jpg"
+        class="h-fit w-16 px-3"
+        alt=""
+      />
+      <input
+        type="search"
+        id="search"
+        name="gsearch"
+        class="h-10 w-80 my-5 border-solid border-b-slate-950 p-4"
+        placeholder="Search"
+      />
+     <button id="submit" class="m-5 p-2 hover:bg-white">Search</button>
+    </div>
+
+    <div
+      class="container1 bg-no-repeat bg-cover h-screen"
+      style="background-image: url('sunny2.jpg')"
+      id="bg"
+    >
+      <h1
+        class="text-6xl text-center p-8 text-black"
+        style="
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+            sans-serif;
+        ">
+        Weather for <span id="cityname"></span>
+
+      </h1>
+
+      <ul class="text-center text-black text-3xl" style="font-family:Tektur">
+        <li>Temp:  <span id="temp"></span> °C</li>
+        <li>Feels_like:  <span id="feels_like"></span>°C</li>
+        <li>Humidity:  <span id="humidity"></span> %</li>
+        <li>Max_temp:  <span id="max_temp"></span>°C</li>
+        <li>Min_temp:  <span id="min_temp"></span>°C</li>
+        <li>Cloud_pct:  <span id="cloud_pct"></span> %</li>
+        <li>Wind_degrees: <span id= "wind_degrees"></span>°</li>
+        <li>Wind_speed: <span id="wind_speed"></span> KM/hr</li>
+      </ul>
+    </div>
+  </body>
+  <script src="input.js"></script>
+</html>
