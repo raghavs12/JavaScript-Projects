@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tektur&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script type="module" crossorigin src="/assets/index-852ffbad.js"></script>
+    <link rel="stylesheet" href="/assets/index-c34dfd67.css">
+  </head>
+  <body>
+    
+    <div class="nav sticky bg-blue-200 h-20 w-full flex justify-center items-center"
+    >
+      <img
+        src="https://img.freepik.com/premium-psd/sunny-rainy-cloudy-day-weather-forecast-icon-illustration_47987-10695.jpg"
+        class="h-fit w-16 px-3"
+        alt=""
+      />
+      <input
+        type="search"
+        id="search"
+        name="gsearch"
+        class="h-10 w-80 my-5 border-solid border-b-slate-950 p-4"
+        placeholder="Search"
+      />
+     <button id="submit" class="m-5 p-2 hover:bg-white">Search</button>
+    </div>
+
+    <div
+      class="container1 bg-no-repeat bg-cover h-full w-full"
+      style="background-image: url('data:image/avif;base64,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'); overflow: hidden;"
+      id="bg"
+    >
+      <h1
+        class="text-8xl text-center p-8 text-black"
+        style="
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+            sans-serif;
+        ">
+        Weather for <span id="cityname"></span>
+
+      </h1>
+
+      <ul class="text-center text-black text-6xl" style="font-family:Tektur">
+        <li>Temp:  <span id="temp"></span> °C</li>
+        <li>Feels_like:  <span id="feels_like"></span>°C</li>
+        <li>Humidity:  <span id="humidity"></span> %</li>
+        <li>Max_temp:  <span id="max_temp"></span>°C</li>
+        <li>Min_temp:  <span id="min_temp"></span>°C</li>
+        <li>Cloud_pct:  <span id="cloud_pct"></span> %</li>
+        <li>Wind_degrees: <span id= "wind_degrees"></span>°</li>
+        <li>Wind_speed: <span id="wind_speed"></span> KM/hr</li>
+      </ul>
+      <div class="table-responsive">          
+        <table class="table table-bordered mt-40 " style="color: black;" id="table">
+              <thead>
+                <tr>
+                  <th>Cities</th>
+                  <th>Temperature</th>
+                  <th>Feels_like</th>
+                  <th>Humidity</th>
+                  <th>Max_temp</th>
+                  <th>Min_temp</th>
+                  <th>Cloud_pct</th>
+                  <th>Wind_degrees</th>
+                  <th>Wind_speed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Delhi</td>
+                  <td> <span id="temp2"></span>°C</td>
+                  <td><span id="feels_like2"></span>°C</td>
+                  <td> <span id="humidity2"></span> %</td>
+                  <td><span id="max_temp2"></span>°C</td>
+                  <td><span id="min_temp2"></span>°C</td>
+                  <td> <span id="cloud_pct2"></span> %</td>
+                  <td><span id= "wind_degrees2"></span>°</td>
+                  <td><span id="wind_speed2"></span> KM/hr</td>
+                </tr>
+                <tr>
+                  <td>Kolkata</td>
+                  <td> <span id="temp3"></span>°C</td>
+                  <td><span id="feels_like3"></span>°C</td>
+                  <td> <span id="humidity3"></span> %</td>
+                  <td><span id="max_temp3"></span>°C</td>
+                  <td><span id="min_temp3"></span>°C</td>
+                  <td> <span id="cloud_pct3"></span> %</td>
+                  <td><span id= "wind_degrees3"></span>°</td>
+                  <td><span id="wind_speed3"></span> KM/hr</td>
+                </tr>
+                <tr>
+                  <td>Bengaluru</td>
+                  <td> <span id="temp4"></span>°C</td>
+                  <td><span id="feels_like4"></span>°C</td>
+                  <td> <span id="humidity4"></span> %</td>
+                  <td><span id="max_temp4"></span>°C</td>
+                  <td><span id="min_temp4"></span>°C</td>
+                  <td> <span id="cloud_pct4"></span> %</td>
+                  <td><span id= "wind_degrees4"></span>°</td>
+                  <td><span id="wind_speed4"></span> KM/hr</td>
+                </tr>
+                 <tr></tr>
+                  <td>Mumbai</td>
+                  <td> <span id="temp5"></span>°C</td>
+                  <td><span id="feels_like5"></span>°C</td>
+                  <td> <span id="humidity5"></span> %</td>
+                  <td><span id="max_temp5"></span>°C</td>
+                  <td><span id="min_temp5"></span>°C</td>
+                  <td> <span id="cloud_pct5"></span> %</td>
+                  <td><span id= "wind_degrees5"></span>°</td>
+                  <td><span id="wind_speed5"></span> KM/hr</td>
+                 
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="bottom bg-blue-200 h-20 w-full"></div>
+
+    
+  </body>
+  
+ 
+</html>

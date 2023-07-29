@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tektur&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+    <link rel="stylesheet" href="/input.css" />
+    <div class="nav sticky bg-blue-200 h-20 w-full flex justify-center items-center"
+    >
+      <img
+        src="https://img.freepik.com/premium-psd/sunny-rainy-cloudy-day-weather-forecast-icon-illustration_47987-10695.jpg"
+        class="h-fit w-16 px-3"
+        alt=""
+      />
+      <input
+        type="search"
+        id="search"
+        name="gsearch"
+        class="h-10 w-80 my-5 border-solid border-b-slate-950 p-4"
+        placeholder="Search"
+      />
+     <button id="submit" class="m-5 p-2 hover:bg-white">Search</button>
+    </div>
+
+    <div
+      class="container1 bg-no-repeat bg-cover h-full w-full"
+      style="background-image: url('sunny.avif'); overflow: hidden;"
+      id="bg"
+    >
+      <h1
+        class="text-8xl text-center p-8 text-black"
+        style="
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+            sans-serif;
+        ">
+        Weather for <span id="cityname"></span>
+
+      </h1>
+
+      <ul class="text-center text-black text-6xl" style="font-family:Tektur">
+        <li>Temp:  <span id="temp"></span> °C</li>
+        <li>Feels_like:  <span id="feels_like"></span>°C</li>
+        <li>Humidity:  <span id="humidity"></span> %</li>
+        <li>Max_temp:  <span id="max_temp"></span>°C</li>
+        <li>Min_temp:  <span id="min_temp"></span>°C</li>
+        <li>Cloud_pct:  <span id="cloud_pct"></span> %</li>
+        <li>Wind_degrees: <span id= "wind_degrees"></span>°</li>
+        <li>Wind_speed: <span id="wind_speed"></span> KM/hr</li>
+      </ul>
+      <div class="table-responsive">          
+        <table class="table table-bordered mt-40 " style="color: black;" id="table">
+              <thead>
+                <tr>
+                  <th>Cities</th>
+                  <th>Temperature</th>
+                  <th>Feels_like</th>
+                  <th>Humidity</th>
+                  <th>Max_temp</th>
+                  <th>Min_temp</th>
+                  <th>Cloud_pct</th>
+                  <th>Wind_degrees</th>
+                  <th>Wind_speed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Delhi</td>
+                  <td> <span id="temp2"></span>°C</td>
+                  <td><span id="feels_like2"></span>°C</td>
+                  <td> <span id="humidity2"></span> %</td>
+                  <td><span id="max_temp2"></span>°C</td>
+                  <td><span id="min_temp2"></span>°C</td>
+                  <td> <span id="cloud_pct2"></span> %</td>
+                  <td><span id= "wind_degrees2"></span>°</td>
+                  <td><span id="wind_speed2"></span> KM/hr</td>
+                </tr>
+                <tr>
+                  <td>Kolkata</td>
+                  <td> <span id="temp3"></span>°C</td>
+                  <td><span id="feels_like3"></span>°C</td>
+                  <td> <span id="humidity3"></span> %</td>
+                  <td><span id="max_temp3"></span>°C</td>
+                  <td><span id="min_temp3"></span>°C</td>
+                  <td> <span id="cloud_pct3"></span> %</td>
+                  <td><span id= "wind_degrees3"></span>°</td>
+                  <td><span id="wind_speed3"></span> KM/hr</td>
+                </tr>
+                <tr>
+                  <td>Bengaluru</td>
+                  <td> <span id="temp4"></span>°C</td>
+                  <td><span id="feels_like4"></span>°C</td>
+                  <td> <span id="humidity4"></span> %</td>
+                  <td><span id="max_temp4"></span>°C</td>
+                  <td><span id="min_temp4"></span>°C</td>
+                  <td> <span id="cloud_pct4"></span> %</td>
+                  <td><span id= "wind_degrees4"></span>°</td>
+                  <td><span id="wind_speed4"></span> KM/hr</td>
+                </tr>
+                 <tr></tr>
+                  <td>Mumbai</td>
+                  <td> <span id="temp5"></span>°C</td>
+                  <td><span id="feels_like5"></span>°C</td>
+                  <td> <span id="humidity5"></span> %</td>
+                  <td><span id="max_temp5"></span>°C</td>
+                  <td><span id="min_temp5"></span>°C</td>
+                  <td> <span id="cloud_pct5"></span> %</td>
+                  <td><span id= "wind_degrees5"></span>°</td>
+                  <td><span id="wind_speed5"></span> KM/hr</td>
+                 
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="bottom bg-blue-200 h-20 w-full"></div>
+
+    
+  </body>
+  <script type="module" src="input.js"></script>
+ 
+</html>
